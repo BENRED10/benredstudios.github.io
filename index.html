@@ -9,7 +9,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=category-strip-fix">
+  <link rel="stylesheet" href="style.css?v=category-strip-centered-final">
+
+  <style>
+    /* Backup fix so the homepage category strip is centred even if CSS cache acts up. */
+    .cinematic-hero .category-strip {
+      position: absolute !important;
+      left: 50% !important;
+      right: auto !important;
+      bottom: 42px !important;
+      transform: translateX(-50%) !important;
+      width: min(1180px, 91%) !important;
+      max-width: 1180px !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 8px !important;
+      padding: 10px !important;
+      overflow: visible !important;
+      flex-wrap: nowrap !important;
+    }
+
+    .cinematic-hero .category-strip a {
+      flex: 1 1 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      min-width: 0 !important;
+      width: auto !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 12px 10px !important;
+      white-space: nowrap !important;
+    }
+
+    @media (max-width: 720px) {
+      .cinematic-hero .category-strip {
+        width: 94% !important;
+        gap: 5px !important;
+        padding: 8px !important;
+      }
+
+      .cinematic-hero .category-strip a {
+        padding: 10px 4px !important;
+        font-size: clamp(0.48rem, 2vw, 0.66rem) !important;
+        letter-spacing: 0.02em !important;
+      }
+    }
+  </style>
 </head>
 <body>
     <nav>
